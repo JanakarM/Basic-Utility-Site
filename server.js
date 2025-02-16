@@ -3,8 +3,7 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-    // res.sendFile(__dirname + '/public/index.html');
-    res.send("Name: " + process.env.NAME);
+    res.sendFile(__dirname + '/public/index.html');
 });
 app.get('/public', (req, res) => {
     res.sendFile(__dirname + '/public/' + req.query.id);
